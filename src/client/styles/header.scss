@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+.logo{
+    background-image: url(../images/logo.png);
+    width: 4em;
+    height: 4em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+}
