@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate Article Using NLP</title>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="logo">
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <h1 class="title">Natural Language Checker</h1>
+            <h3 class="title">Add A Link To Analyze!</h3>
+            <section class="container">
+                <form class="form">
+                    <input id="article-url" type="text" name="input" value="" placeholder="Add The Article URL">
+                    <input class="button" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section  id="results">
+                <strong>Form Results:</strong>
+                <ul>
+                  <li id="agree"></li>
+                  <li id="subject"></li>
+                  <li id="iron"></li>
+                  <li id="score"></li>
+                  <li id="conf"></li>
+                  <li id='status'></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Zainab-Elsayed@Udacity</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                    }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                    });
+                });
+                }
+           </script>
+    </body>
+</html>
